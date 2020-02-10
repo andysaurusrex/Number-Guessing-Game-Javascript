@@ -18,4 +18,15 @@ const compareGuesses = (human, computer, target) => {
 }; 
 
 // Create update score function to increase winner's score each round
+const updateScore = winner => {
+    // If winner is human then humanScore gains 1 point
+    if (winner === 'human') {
+        humanScore++;
+    // If winner is computer then computerScore gains 1 point
+    } else if (winner === 'computer'){
+        computerScore++;
+    };
+};
 
+// Create advance round function to update round number after each round
+const advanceRound = () => currentRoundNumber++;
